@@ -2,7 +2,7 @@
 <img src="https://raw.githubusercontent.com/uzinfocom-org/website/main/src/images/logo.svg" alt="logo" height="100" align="left">
 <h1 style="display: inline">Korrektor Rust Lib</h1>
 
-Dasturlar endi O'zbek tilini ham tushunishadi!
+Dasturlar endilikda O'zbek tilini ham tushunadi!
 
 [![GitHub top language](https://img.shields.io/github/languages/top/uzinfocom-org/korrektor-rs?style=flat-square&logo=github)](https://github.com/uzinfocom-org/vicardi)
 [![Chat](https://img.shields.io/badge/Chat-grey?style=flat-square&logo=telegram)](https://t.me/korrektuz)
