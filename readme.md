@@ -9,26 +9,27 @@ Dasturlar endi O'zbek tilini ham tushunishadi!
 [![Test CI](https://github.com/uzinfocom-org/korrektor-rs/actions/workflows/test.yml/badge.svg)](https://github.com/uzinfocom-org/korrektor-rs/actions/workflows/test.yml)
 </header>
 
-## Haqida
+## Kutubxona haqida
 
-Ushbu kutubxona Rust dasturlash tilida yaratilga va o'zaro O'zbek tili bilan bog'liq dasturlar uchun har xil 
-qisqartma va qulayliklar beruvchi kutubxonadir. Kutubxona WASM formatlarini ham o'z ichiga oladi.
+Ushbu kutubxona Rust dasturlash tilida yaratilgan bo'lib O'zbek tili bilan bog'liq turli matn manipulatsiyalarini amalga 
+oshirishga yordam beradi. Shuningdek kutubxona WASM formatlarini ham o'z ichiga oladi, bu orqali siz kutubxonani yuqori 
+dasturlash tillariga ham hech qanday muammolarsiz integratsiya qilishingiz mumkin.
 
 ## Qulayliklar
 
-- Soz'larni alfabit tartibida saralash
-- Tokenizatsiya (Tokenization)
-- Qaytarilgan so'zlar (so'zlar chastotasi)
-- Duplikatlar tozalash 
-- _Yana ko'proq keyingi relizlarda..._
+- Ma'lumotlarni o'zbek alifbosi tartibida saralash
+- Tokenizatsiya. O'zbek tili imlo qoidalariga asosan so'zlarni bo'ginlarga ajratish
+- Matndagi so'zlar chastotasini hisoblash
+- Dublikatlar tozalash
+- _Yanada ko'proq imkoniyatlar keyingi relizlarda..._
 
-> Bu proyekt hozir sinov bosqichidan o'tmoqda. Agarda bironta xatolikka duchor
-> bo'lsangiz, xatolik haqida [e'lon](https://github.com/uzinfocom-org/korrektor-rs/issues/new)
-> qoldirishni unutmang.
+> Bu loyiha hozir sinov bosqichidan o'tmoqda. Agarda biror xatolikka duchor
+> bo'lsangiz, xatolik haqida [xabardor](https://github.com/uzinfocom-org/korrektor-rs/issues/new)
+> qilishni unutmang.
 
 ## O'rnatish
 
-Ushbu qatorni Cargo.toml faylingizga joylashtiring:
+Quyidagi konfiguratsion qismni Cargo.toml fayliga joylashtiring:
 
 ```toml
 [dependencies]
@@ -37,4 +38,4 @@ korrektor = "0.1.0"
 
 ## Litsenziya
 
-Ushbu kutubxona MIT va Apache-2 ikki litsenziya ostida distributsiya qilinadi. Ko'proq ma'lumot uchun [LICENSE-MIT](./license-mit) va [LICENSE-APACHE](./license-apache) ko'zdan kechiring!
+Ushbu kutubxona MIT va Apache-2 ikki litsenziyasi ostida tarqatiladi. Batafsil ma'lumot uchun [LICENSE-MIT](./license-mit) va [LICENSE-APACHE](./license-apache) fayllarini ko'zdan kechiring!
