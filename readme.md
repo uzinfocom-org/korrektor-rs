@@ -6,7 +6,7 @@ Dasturlar endi O'zbek tilini ham tushunishadi!
 
 [![GitHub top language](https://img.shields.io/github/languages/top/uzinfocom-org/korrektor-rs?style=flat-square&logo=github)](https://github.com/uzinfocom-org/vicardi)
 [![Chat](https://img.shields.io/badge/Chat-grey?style=flat-square&logo=telegram)](https://t.me/korrektuz)
-[![Test CI](https://github.com/uzinfocom-org/korrektor-rs/actions/workflows/rust.yml/badge.svg)](https://github.com/uzinfocom-org/korrektor-rs/actions/workflows/rust.yml)
+[![Test CI](https://github.com/uzinfocom-org/korrektor-rs/actions/workflows/test.yml/badge.svg)](https://github.com/uzinfocom-org/korrektor-rs/actions/workflows/test.yml)
 </header>
 
 ## Haqida
