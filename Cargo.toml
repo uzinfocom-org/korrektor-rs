@@ -1,6 +1,6 @@
 [package]
 name = "korrektor"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 homepage = "https://korrektor.uz"
 repository = "https://github.com/uzinfocom-org/korrektor-rs"
@@ -10,7 +10,7 @@ authors = [
     "Manuchehr Usmonov <yetimdasturchi@gmail.com> (https://manu.uno)",
     "UwUssimo Robinson <uwussimo@icloud.com> (https://uwussi.moe)"
 ]
-keywords = ["uzbek", "language", "korrektor", "text processing"]
+keywords = ["uzbek", "language", "korrektor", "text-processing"]
 readme = "readme.md"
 categories = ["text-processing"]
 license = "MIT OR Apache-2.0"
