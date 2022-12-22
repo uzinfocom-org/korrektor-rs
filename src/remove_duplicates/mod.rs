@@ -1,6 +1,18 @@
 use pcre::Pcre;
 use itertools::Itertools;
 
+/// Removes word duplicates from a text.
+///
+/// Given a String returns a new String without word duplications.
+///
+/// # Example
+/// ```rust
+/// use korrektor::remove_duplicates::remove_duplicates;
+///
+/// let input = "salom salom xato salom".to_string();
+/// let output = remove_duplicates(input);
+/// assert_eq!(output, "salom xato".to_string());
+/// ```
 pub fn remove_duplicates(text: String) -> String {
     let mut input = text;
 

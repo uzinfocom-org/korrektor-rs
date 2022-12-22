@@ -1,5 +1,16 @@
 pub mod constants;
 
+/// Returns a word representation of a given number.
+///
+/// Given an integer returns a String with corresponding word equivalent.
+///
+/// # Example
+/// ```rust
+///use korrektor::number::integer_to_word;
+///
+/// let output = integer_to_word(1024);
+/// assert_eq!(output, "bir ming yigirma to‘rt".to_string());
+/// ```
 pub fn integer_to_word(number: i64) -> String {
     //find number to word in constants 0 to 19
     if number == 0 {

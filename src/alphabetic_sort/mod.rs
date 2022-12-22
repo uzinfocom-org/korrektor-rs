@@ -110,6 +110,18 @@ pub fn usort(string1: &str, string2: &str) -> i8 {
     }
 }
 
+/// Sorts words in alphabetically ascending order.
+///
+/// Given String of text returns a new String with words sorted and separated with a newline.
+///
+/// # Example
+/// ```rust
+/// use korrektor::alphabetic_sort::get_sorted_text;
+///
+/// let input = "G‘ozal estafeta chilonzor o'zbek chiroyli".to_string();
+/// let output = get_sorted_text(input);
+/// assert_eq!(output, "estafeta\no‘zbek\nchilonzor\nchiroyli\nG‘ozal\n".to_string());
+///```
 pub fn get_sorted_text(text: String) -> String {
     let sortable = &to_sortable(text);
     let sorted_intermediate = sort_sortable(sortable);

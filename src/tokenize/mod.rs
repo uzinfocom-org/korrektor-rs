@@ -37,6 +37,19 @@ const REPLACE_LAT: [(&str, &str); 2] = [
     ("[bdfghjklmnpqrstvxyzğšč]", "C")
 ];
 
+///
+/// Splits the word by syllables.
+///
+/// Given a String reference returns a new String
+/// containing the word separated by syllables with a delimiter.
+///
+/// # Example
+/// ```rust
+/// use korrektor::tokenize::get_splitted_word;
+///
+/// let output = get_splitted_word(&"chiroyli".to_string());
+/// assert_eq!(output, "chi-roy-li".to_string());
+/// ```
 pub fn get_splitted_word(word: &String) -> String {
     let mut result = a_correct(word);
     result = result.trim().to_string();
