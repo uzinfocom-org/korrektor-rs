@@ -1,4 +1,4 @@
-//! Korrektor library provides functionality to ease processing of Uzbek language
+//! Korrektor library provides functionality to ease processing of Uzbek language.
 //!
 pub mod alphabetic_sort;
 pub mod remove_duplicates;

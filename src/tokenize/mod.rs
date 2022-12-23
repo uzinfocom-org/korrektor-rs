@@ -1,3 +1,7 @@
+//! Functions to split Uzbek words by syllables.
+//!
+//! Implemented according to grammar rules
+//! for both latin and cyrillic modes.
 use pcre::Pcre;
 use regex::Regex;
 

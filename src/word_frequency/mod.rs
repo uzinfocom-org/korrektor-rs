@@ -1,3 +1,6 @@
+//! Functions to count words in a text.
+//!
+//! Both latin and cyrillic modes are supported.
 use std::collections::HashMap;
 use pcre::Pcre;
 use itertools::Itertools;

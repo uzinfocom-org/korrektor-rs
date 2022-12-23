@@ -1,3 +1,6 @@
+//! Functions to sort Uzbek words.
+//!
+//! Both cyrillic and latin modes can be used.
 use regex::Regex;
 
 const CHAR_ORDER: [&str; 128] = [
