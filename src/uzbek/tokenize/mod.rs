@@ -49,12 +49,12 @@ const REPLACE_LAT: [(&str, &str); 2] = [
 ///
 /// # Example
 /// ```rust
-/// use korrektor::tokenize::get_splitted_word;
+/// use korrektor::uzbek::tokenize;
 ///
-/// let output = get_splitted_word(&"chiroyli".to_string());
+/// let output = tokenize::split_word(&"chiroyli".to_string());
 /// assert_eq!(output, "chi-roy-li".to_string());
 /// ```
-pub fn get_splitted_word(word: &String) -> String {
+pub fn split_word(word: &String) -> String {
     let mut result = a_correct(word);
     result = result.trim().to_string();
     let mut last = result.clone();
@@ -249,8 +249,8 @@ mod as_tests {
 
     #[test]
     fn do_test() {
-        assert_eq!(get_splitted_word(&"singil".to_string()), "si-ngil");
-        assert_eq!(get_splitted_word(&"chiroyli".to_string()), "chi-roy-li");
-        assert_eq!(get_splitted_word(&"чиройли".to_string()), "чи-рой-ли");
+        assert_eq!(split_word(&"singil".to_string()), "si-ngil");
+        assert_eq!(split_word(&"chiroyli".to_string()), "chi-roy-li");
+        assert_eq!(split_word(&"чиройли".to_string()), "чи-рой-ли");
     }
 }

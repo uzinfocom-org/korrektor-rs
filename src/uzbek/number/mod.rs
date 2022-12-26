@@ -1,7 +1,7 @@
 //! Functions to return Uzbek word equivalent of numbers.
 //!
 //! Only latin mode supported currently.
-pub mod constants;
+mod constants;
 
 /// Returns a word representation of a given number.
 ///
@@ -9,9 +9,9 @@ pub mod constants;
 ///
 /// # Example
 /// ```rust
-///use korrektor::number::integer_to_word;
+///use korrektor::uzbek::number;
 ///
-/// let output = integer_to_word(1024);
+/// let output = number::integer_to_word(1024);
 /// assert_eq!(output, "bir ming yigirma to‘rt".to_string());
 /// ```
 pub fn integer_to_word(number: i64) -> String {

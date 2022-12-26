@@ -37,7 +37,26 @@ const FROM_SORT: [&str; 10] = [
     ("č ch")
 ];
 
-pub fn to_sortable(text: String) -> String {
+/// Sorts words in alphabetically ascending order.
+///
+/// Given String of text returns a new String with words sorted and separated with a newline.
+///
+/// # Example
+/// ```rust
+/// use korrektor::uzbek::alphabetic;
+///
+/// let input = "G‘ozal estafeta chilonzor o'zbek chiroyli".to_string();
+/// let output = alphabetic::sort(input);
+/// assert_eq!(output, "estafeta\no‘zbek\nchilonzor\nchiroyli\nG‘ozal\n".to_string());
+///```
+pub fn sort(text: String) -> String {
+    let sortable = &to_sortable(text);
+    let sorted_intermediate = sort_sortable(sortable);
+
+    from_sortable(sorted_intermediate)
+}
+
+fn to_sortable(text: String) -> String {
     let mut input: String = text;
 
     for pair in TO_SORT.into_iter() {
@@ -51,7 +70,7 @@ pub fn to_sortable(text: String) -> String {
     input
 }
 
-pub fn from_sortable(text: String) -> String {
+fn from_sortable(text: String) -> String {
     let mut input: String = text;
 
     for pair in FROM_SORT.into_iter() {
@@ -65,7 +84,7 @@ pub fn from_sortable(text: String) -> String {
     input
 }
 
-pub fn usort(string1: &str, string2: &str) -> i8 {
+fn usort(string1: &str, string2: &str) -> i8 {
     let length = std::cmp::min(string1.len() - 1, string2.len() - 1);
 
     for i in 0..length {
@@ -111,25 +130,6 @@ pub fn usort(string1: &str, string2: &str) -> i8 {
         std::cmp::Ordering::Greater => 1,
         std::cmp::Ordering::Equal => 0,
     }
-}
-
-/// Sorts words in alphabetically ascending order.
-///
-/// Given String of text returns a new String with words sorted and separated with a newline.
-///
-/// # Example
-/// ```rust
-/// use korrektor::alphabetic_sort::get_sorted_text;
-///
-/// let input = "G‘ozal estafeta chilonzor o'zbek chiroyli".to_string();
-/// let output = get_sorted_text(input);
-/// assert_eq!(output, "estafeta\no‘zbek\nchilonzor\nchiroyli\nG‘ozal\n".to_string());
-///```
-pub fn get_sorted_text(text: String) -> String {
-    let sortable = &to_sortable(text);
-    let sorted_intermediate = sort_sortable(sortable);
-
-    from_sortable(sorted_intermediate)
 }
 
 fn sort_sortable(text: &str) -> String {
@@ -212,6 +212,6 @@ mod as_tests {
     fn get_sorted_text_test() {
         let input = String::from("G‘ozal estafeta chilonzor o'zbek chiroyli");
         let output = String::from("estafeta\no‘zbek\nchilonzor\nchiroyli\nG‘ozal\n");
-        assert_eq!(get_sorted_text(input), output)
+        assert_eq!(sort(input), output)
     }
 }

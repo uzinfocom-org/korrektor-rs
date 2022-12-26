@@ -10,13 +10,13 @@ use itertools::Itertools;
 ///
 /// # Example
 /// ```rust
-/// use korrektor::remove_duplicates::remove_duplicates;
+/// use korrektor::utils::duplicates;
 ///
 /// let input = "salom salom xato salom".to_string();
-/// let output = remove_duplicates(input);
+/// let output = duplicates::remove(input);
 /// assert_eq!(output, "salom xato".to_string());
 /// ```
-pub fn remove_duplicates(text: String) -> String {
+pub fn remove(text: String) -> String {
     let mut input = text;
 
     let mut re = Pcre::compile(r"[\p{Cyrillic}|\p{Latin}|0-9|\-_]+").unwrap();
@@ -37,6 +37,6 @@ mod as_tests {
 
     #[test]
     fn remove_duplicates_test() {
-        assert_eq!(remove_duplicates(String::from("salom salom xato salom")), String::from("salom xato"));
+        assert_eq!(remove(String::from("salom salom xato salom")), String::from("salom xato"));
     }
 }
