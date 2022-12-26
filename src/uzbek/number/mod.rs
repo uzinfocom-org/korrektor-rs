@@ -12,7 +12,8 @@ mod constants;
 ///use korrektor::uzbek::number;
 ///
 /// let output = number::integer_to_word(1024);
-/// assert_eq!(output, "bir ming yigirma to‘rt".to_string());
+/// let expected = "bir ming yigirma to‘rt".to_string();
+/// assert_eq!(output, expected);
 /// ```
 pub fn integer_to_word(number: i64) -> String {
     //find number to word in constants 0 to 19
