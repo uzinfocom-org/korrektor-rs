@@ -1,4 +1,4 @@
-//! Functions to remove duplicated Uzbek words from text.
+//! Functions to remove duplicated words from text.
 //!
 //! Both latin and cyrillic modes are supported.
 use pcre::Pcre;

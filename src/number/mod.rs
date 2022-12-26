@@ -1,4 +1,4 @@
-//! Functions to return word equivalent of numbers.
+//! Functions to return Uzbek word equivalent of numbers.
 //!
 //! Only latin mode supported currently.
 pub mod constants;
