@@ -15,11 +15,11 @@ use itertools::Itertools;
 /// use std::collections::HashMap;
 /// use korrektor::utils::frequency;
 ///
-/// let output = frequency::count("salom xato quyosh salom mushuk".to_string());
-/// let correct_output = HashMap::from([(String::from("salom"), 2), (String::from("xato"), 1), (String::from("quyosh"), 1), (String::from("mushuk"), 1)]);
-/// assert_eq!(output, correct_output);
+/// let output = frequency::count("salom xato quyosh salom mushuk");
+/// let expected = HashMap::from([(String::from("salom"), 2), (String::from("xato"), 1), (String::from("quyosh"), 1), (String::from("mushuk"), 1)]);
+/// assert_eq!(output, expected);
 /// ```
-pub fn count(text: String) -> HashMap<String, usize> {
+pub fn count(text: &str) -> HashMap<String, usize> {
     let mut result: HashMap<String, usize> = HashMap::new();
     let mut pre_result: HashMap<&str, usize> = HashMap::new();
 
@@ -44,7 +44,7 @@ mod as_tests {
 
     #[test]
     fn word_frequency_test() {
-        assert_eq!(count(String::from("salom xato quyosh salom mushuk")),
+        assert_eq!(count("salom xato quyosh salom mushuk"),
                    HashMap::from([(String::from("salom"), 2), (String::from("xato"), 1), (String::from("quyosh"), 1), (String::from("mushuk"), 1)]));
     }
 }

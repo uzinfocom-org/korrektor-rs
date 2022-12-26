@@ -12,12 +12,12 @@ use itertools::Itertools;
 /// ```rust
 /// use korrektor::utils::duplicates;
 ///
-/// let input = "salom salom xato salom".to_string();
-/// let output = duplicates::remove(input);
-/// assert_eq!(output, "salom xato".to_string());
+/// let output = duplicates::remove("salom salom xato salom");
+/// let expected = "salom xato".to_string();
+/// assert_eq!(output, expected);
 /// ```
-pub fn remove(text: String) -> String {
-    let mut input = text;
+pub fn remove(text: &str) -> String {
+    let mut input = text.to_string();
 
     let mut re = Pcre::compile(r"[\p{Cyrillic}|\p{Latin}|0-9|\-_]+").unwrap();
     let matches = re.matches(&input);
@@ -37,6 +37,6 @@ mod as_tests {
 
     #[test]
     fn remove_duplicates_test() {
-        assert_eq!(remove(String::from("salom salom xato salom")), String::from("salom xato"));
+        assert_eq!(remove("salom salom xato salom"), String::from("salom xato"));
     }
 }

@@ -45,12 +45,12 @@ const FROM_SORT: [&str; 10] = [
 /// ```rust
 /// use korrektor::uzbek::alphabetic;
 ///
-/// let input = "G‘ozal estafeta chilonzor o'zbek chiroyli".to_string();
-/// let output = alphabetic::sort(input);
-/// assert_eq!(output, "estafeta\no‘zbek\nchilonzor\nchiroyli\nG‘ozal\n".to_string());
+/// let output = alphabetic::sort("G‘ozal estafeta chilonzor o'zbek chiroyli");
+/// let expected = "estafeta\no‘zbek\nchilonzor\nchiroyli\nG‘ozal\n".to_string();
+/// assert_eq!(output, expected);
 ///```
-pub fn sort(text: String) -> String {
-    let sortable = &to_sortable(text);
+pub fn sort(text: &str) -> String {
+    let sortable = &to_sortable(text.to_string());
     let sorted_intermediate = sort_sortable(sortable);
 
     from_sortable(sorted_intermediate)
@@ -210,7 +210,7 @@ mod as_tests {
 
     #[test]
     fn get_sorted_text_test() {
-        let input = String::from("G‘ozal estafeta chilonzor o'zbek chiroyli");
+        let input = "G‘ozal estafeta chilonzor o'zbek chiroyli";
         let output = String::from("estafeta\no‘zbek\nchilonzor\nchiroyli\nG‘ozal\n");
         assert_eq!(sort(input), output)
     }
