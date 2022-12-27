@@ -16,7 +16,11 @@ use itertools::Itertools;
 /// use korrektor::utils::frequency;
 ///
 /// let output = frequency::count("salom xato quyosh salom mushuk");
-/// let expected = HashMap::from([(String::from("salom"), 2), (String::from("xato"), 1), (String::from("quyosh"), 1), (String::from("mushuk"), 1)]);
+/// let expected = HashMap::from([
+///    (String::from("salom"), 2),
+///    (String::from("xato"), 1),
+///    (String::from("quyosh"), 1),
+///    (String::from("mushuk"), 1)]);
 /// assert_eq!(output, expected);
 /// ```
 pub fn count(text: &str) -> HashMap<String, usize> {

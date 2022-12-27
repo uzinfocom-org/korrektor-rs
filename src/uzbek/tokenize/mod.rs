@@ -51,7 +51,7 @@ const REPLACE_LAT: [(&str, &str); 2] = [
 /// ```rust
 /// use korrektor::uzbek::tokenize;
 ///
-/// let output = tokenize::split_word(&"chiroyli".to_string());
+/// let output = tokenize::split_word("chiroyli");
 /// let expected = "chi-roy-li".to_string();
 /// assert_eq!(output, expected);
 /// ```
